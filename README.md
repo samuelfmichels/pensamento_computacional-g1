@@ -1,1 +1,36 @@
 # pensamento_computacional-g1
+
+Você foi contratado para desenvolver a lógica de um sistema automatizado utilizado em uma máquina que realiza o controle de uma comporta mecânica, representada por um servo motor.
+O operador controla o sistema por meio de um botão de iniciar. Além disso, o sistema possui dois potenciômetros que influenciam diretamente o funcionamento.
+O primeiro potenciômetro será utilizado para definir o tempo de execução do processo. Esse valor varia de 0 a 1023 e deve ser interpretado pelo sistema como um tempo entre 1 e 10 segundos, onde valores menores representam tempos mais curtos e valores maiores representam tempos mais longos.
+Ao pressionar o botão iniciar, o sistema deve ler esse valor e iniciar o processo. Durante esse período, o servo motor deve se mover para uma posição de funcionamento (por exemplo, abrir a comporta) e permanecer nessa posição durante o tempo definido. Após esse tempo, o servo deve retornar à posição inicial (fechar a comporta).
+Durante o funcionamento, o sistema deve indicar seu estado por meio de LEDs:
+LED vermelho → sistema parado
+LED amarelo → processo em execução
+LED verde → processo finalizado
+Além disso, o segundo potenciômetro será utilizado para definir a posição de abertura do servo motor. Esse valor deve ser convertido para um ângulo (por exemplo, entre 0° e 180°), determinando o quanto a comporta será aberta.
+Durante os testes, foi observado que o operador pode pressionar o botão de iniciar em momentos inadequados, como tentar iniciar o sistema enquanto ele já está em execução. O sistema deve tratar essa situação, evitando reiniciar o processo enquanto ele ainda estiver em andamento.
+
+Identifique as entradas e saídas do sistema 
+Apresente todos os componentes do sistema e para que eles servem
+Apresente as regras de funcionamento a serem implementadas
+Explique como você utilizaria estruturas if para controlar o sistema
+
+A) 
+1° entrada - botão
+2° entrada - Potênciometro 1
+3° entrada - Potênciometro 2
+
+1° Saída - led vermelho
+2° Saída - Led verde
+3° Saída - Led amarelo
+4­° Saída - Servo motor
+
+B) 
+Botão - Ele liga o sistema
+Potênciometro 1 - Ele dita o tempo que o sistema ira rodar
+Potênciometro 2 - Ele define a ângulagem do servo motor
+
+Led vermelho - Significa que o sistema está parado
+Led verde - Significa que o ciclo do sistema está concluido
+Led amarelo - Significa que o sistema está em movimento
