@@ -34,3 +34,30 @@ Potênciometro 2 - Ele define a ângulagem do servo motor
 Led vermelho - Significa que o sistema está parado
 Led verde - Significa que o ciclo do sistema está concluido
 Led amarelo - Significa que o sistema está em movimento
+Servo motor - Simula um comporta(abre e fecha)
+
+C) 
+Enquanto o botão não for precionado o sistema não deve ligar, apenas o led vermelho deve estar acesso.
+Quando o botão for acionado o sistema deve ler os indicadores dos potênciometros e mover o servo motor, paralelamente o led vermelho ira ligar e o amarelo ira acender.
+Quando o sistema concluir, o botão amarelo ira desligar e o verde ira ser acionado.
+O botão não pode ser acionado até que o ciclo se acabe
+quando o ciclo acabar é preciso que tudo volte para a etapa um. O servo motor voltara para zero e o led verde ira desligar, com o led vermelhor ligando novamente
+
+D)
+IF botão = 0 -- Sistema desligado
+IF botão = 1 -- Sistema ligado
+
+IF potênciometro 1 > 100 -- 1s
+IF potênciometro 1 < 100 > 200 -- 2s
+IF potênciometro 1 < 200 > 300 -- 3s
+IF potênciometro 2 < 300 > 400 -- 4s
+IF potênciometro 2 < 400 > 500 -- 5s
+IF potênciometro 2 < 500 > 600 -- 6s
+IF potênciometro 2 < 600 > 700 -- 7s
+IF potênciometro 2 < 700 > 800 -- 8s
+IF potênciometro 2 < 800 > 900 -- 9s
+IF potênciometro 2 < 900 > 1023 -- 10s
+
+
+
+
