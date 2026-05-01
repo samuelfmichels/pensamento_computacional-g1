@@ -44,19 +44,31 @@ O botão não pode ser acionado até que o ciclo se acabe
 quando o ciclo acabar é preciso que tudo volte para a etapa um. O servo motor voltara para zero e o led verde ira desligar, com o led vermelhor ligando novamente
 
 D)
-IF botão = 0 -- Sistema desligado
+IF botão = 0 -- Sistema desligado e led vermelho ligado
 IF botão = 1 -- Sistema ligado
 
 IF potênciometro 1 > 100 -- 1s
 IF potênciometro 1 < 100 > 200 -- 2s
 IF potênciometro 1 < 200 > 300 -- 3s
-IF potênciometro 2 < 300 > 400 -- 4s
-IF potênciometro 2 < 400 > 500 -- 5s
-IF potênciometro 2 < 500 > 600 -- 6s
-IF potênciometro 2 < 600 > 700 -- 7s
-IF potênciometro 2 < 700 > 800 -- 8s
-IF potênciometro 2 < 800 > 900 -- 9s
-IF potênciometro 2 < 900 > 1023 -- 10s
+IF potênciometro 1 < 300 > 400 -- 4s
+IF potênciometro 1 < 400 > 500 -- 5s
+IF potênciometro 1 < 500 > 600 -- 6s
+IF potênciometro 1 < 600 > 700 -- 7s
+IF potênciometro 1 < 700 > 800 -- 8s
+IF potênciometro 1 < 800 > 900 -- 9s
+IF potênciometro 1 < 900 > 1023 -- 10s
+
+IF potênciometro 2 = 45 -- 45°
+IF potênciometro 2 = 90 -- 90°
+IF potênciometro 2 = 135 -- 135°
+IF potênciometro 2 = 180 -- 180°
+
+IF sistema em movimento = Led vermelho desliga e o amarelo acende - apertar botão é ignorado
+IF sistema sem movimento = led amarelo desliga e o verde acende
+
+
+
+
 
 
 
