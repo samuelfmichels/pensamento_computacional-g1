@@ -1,0 +1,43 @@
+#include <Servo.h>
+
+int pot_tempo = 0;
+
+int pot_graus = 0;
+
+int botao = 0;
+
+Servo servo_12;
+
+void setup()
+{
+  pinMode(9, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(10, OUTPUT);
+  servo_12.attach(12, 500, 2500);
+  pinMode(2, INPUT);
+  pinMode(A1, INPUT);
+  pinMode(A2, INPUT);
+
+  digitalWrite(9, LOW);
+  digitalWrite(11, LOW);
+  digitalWrite(10, HIGH);
+  servo_12.write(0);
+}
+
+void loop()
+{
+  botao = digitalRead(2);
+  if (botao == 1) {
+    digitalWrite(10, LOW);
+    digitalWrite(11, LOW);
+    digitalWrite(9, HIGH);
+    pot_graus = map(analogRead(A1), 0, 1023, 0, 180);
+    pot_tempo = map(analogRead(A2), 0, 1023, 0, 10);
+    delay(1000 * pot_tempo); // Wait for 1000 * pot_tempo millisecond(s)
+    digitalWrite(9, HIGH);
+    digitalWrite(11, LOW);
+    delay(5000); // Wait for 5000 millisecond(s)
+    digitalWrite(9, LOW);
+    digitalWrite(10, HIGH);
+  }
+}
